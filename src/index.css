@@ -1,24 +1,11 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   color: #333;
 }
 
+/* Navbar */
 nav {
   background: #000;
   color: white;
@@ -26,42 +13,94 @@ nav {
 }
 
 nav h1 {
-  font-size: 1.25rem;
+  margin: 0;
 }
 
 nav ul {
   display: flex;
+  justify-content: center;
   list-style: none;
   gap: 24px;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
 }
 
 nav a:hover {
   color: gold;
 }
 
+/* Hero section */
 section {
   padding: 80px 20px;
 }
 
-button, a.btn {
+section:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f7d06a, #f9f9f9);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Button style */
+.btn {
   background: black;
   color: gold;
-  padding: 10px 20px;
+  padding: 10px 24px;
   border-radius: 25px;
   text-decoration: none;
   transition: 0.3s;
+  display: inline-block;
+  margin-top: 20px;
 }
 
-button:hover, a.btn:hover {
+.btn:hover {
   background: gold;
   color: black;
 }
 
+/* Projects grid */
+.projects {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Footer */
 footer {
   background: #000;
   color: white;
